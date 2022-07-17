@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define INF 999999999
+typedef pair<int,int> pii;
+int v,e,musta,mustb;
+int dist[1001];
+vector<pii> d[1001];
+int visited[1001];
+int res=INF;
+void dijkstra(int start){
+    for (int i = 0; i <= v; i++) dist[i] = INF;
+    dist[start] = 0;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q;
+    q.push({ 0,start });
+    while (!q.empty()) {
+        int cur = q.top().second;
+        int curDist = q.top().first;
+        q.pop();
+        for (int i = 0; i < d[cur].size(); i++) {
+            int next = d[cur][i].first;
+            int nextDist = d[cur][i].second;
+            if (dist[next] > curDist + nextDist) {
+                dist[next] = curDist + nextDist;
+                q.push({ dist[next],next });
+            }
+        }
+    }
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+    cin>>v>>e;
+    for(int i=0;i<e;i++){
+        int a,b,c; cin>>a>>b>>c;
+        d[a].push_back({b,c});
+        d[b].push_back({a,c});
+    }
+    cin>>musta>>mustb;
+    int stoa,stob,atob,aton,bton;
+    dijkstra(1);
+    stoa=dist[musta]; stob=dist[mustb];
+    dijkstra(musta);
+    atob=dist[mustb];
+    aton=dist[v];
+    dijkstra(mustb);
+    bton=dist[v];
+
+    res=min(stoa+atob+aton,stoa+atob+bton);
+    res=min(INF,res);
+    if(res==INF || atob==INF) cout<<-1;
+    else cout<<res;
+}
