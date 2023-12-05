@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e57b3f7-09d1-4e39-b268-d9bbbb4a42d7" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../Sort/2822_S5.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sort/5800_S5.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sort/8979.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../brute force/1138.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../brute force/2615.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../divide&amp;conquer/1074.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../divide&amp;conquer/14731_S2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11055.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11066.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9658.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/11438.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/1697.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/1865.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/1926.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/1987.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/2206.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/24445.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/24479.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/24481.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/2583.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/3184.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/4485.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/4963.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/7562.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/7569.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/7576.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/shortest_path/11403.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/shortest_path/1738.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/shortest_path/1916.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/tree/21924.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graph/tree/9934.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../st_q_dq/17299_오등큰수.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../st_q_dq/18115_카드 놓기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/1043.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/10775.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/16562.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/18116.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/1976.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/20040.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/24391.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/mst/10423.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/mst/1647.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../union find/mst/6497.cpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1.2" />
+  </component>
+  <component name="ProjectId" id="2Z8IoVbSppC2ucmBwjpirlEpgkT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="6e57b3f7-09d1-4e39-b268-d9bbbb4a42d7" name="변경" comment="" />
+      <created>1701797455819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701797455819</updated>
+      <workItem from="1701797457641" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
