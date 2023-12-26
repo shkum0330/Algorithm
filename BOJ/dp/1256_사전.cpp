@@ -1,200 +1,56 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef pair<int,int> pii;
-char board[11][11];
-int n,m;
-pii red,blue,hole;
-int dy[4]={0,0,-1,1};
-int dx[4]={-1,1,0,0};
-int res=30;
+#define INF 1000000000
 
-void moving(int cnt,int dir,int ry,int rx,int by,int bx){
-    if(cnt>10) return;
+int dp[401][201];
 
-    bool r_flag=false; // 파란 구슬의 진행 경로에 빨간 구슬이 있는지 확인
-    bool b_flag=false; // 빨간 구슬의 진행 경로에 파란 구슬이 있는지 확인
-    bool r_in=false;
-    bool b_in=false;
-    if(dir==0){ // 왼쪽으로 기울이기
-        if(ry==by) {
-            if (rx < bx) { // RB
-                r_flag = true;
-            }
-            if (bx < rx) { // BR
-                b_flag = true;
-            }
+string solve(int n, int m, int k) {
+
+    if (n == 0){
+        string tmp="";
+        for (int i = 0; i < m; ++i) {
+            tmp += 'z';
         }
-        while (true){
-            rx += dx[dir];
-            if(board[ry][rx]=='O'){
-                r_in= true;
-                break;
-            }
-            if(board[ry][rx]=='#'){
-                rx -= dx[dir];
-                break;
-            }
-        }
-        while (true){
-            bx += dx[dir];
-            if(board[by][bx]=='O'){
-                b_in= true;
-                break;
-            }
-            if(board[by][bx]=='#'){
-                bx -= dx[dir];
-                break;
-            }
-        }
-        if(rx==bx){
-            if(r_flag) bx -= dx[dir];
-            if(b_flag) rx -= dx[dir];
-        }
+        return tmp;
     }
-    if(dir==1){ // 오른쪽으로 기울이기
-        if(ry==by) {
-            if (rx < bx) { // RB
-                b_flag = true;
-            }
-            if (bx < rx) { // BR
-                r_flag = true;
-            }
+    if (m == 0){
+        string tmp="";
+        for (int i = 0; i < n; ++i) {
+            tmp += 'a';
         }
-        while (true){
-            rx += dx[dir];
-            if(board[ry][rx]=='O'){
-                r_in= true;
-                break;
-            }
-            if(board[ry][rx]=='#'){
-                rx -= dx[dir];
-                break;
-            }
-        }
-        while (true){
-            bx += dx[dir];
-            if(board[by][bx]=='O'){
-                b_in= true;
-                break;
-            }
-            if(board[by][bx]=='#'){
-                bx -= dx[dir];
-                break;
-            }
-        }
-        if(rx==bx){
-            if(r_flag) bx -= dx[dir];
-            if(b_flag) rx -= dx[dir];
-        }
-    }
-    if(dir==2){ // 위로 기울이기
-        if(rx==bx) {
-            if (ry < by) {
-                r_flag = true;
-            }
-            if (by < ry) {
-                b_flag = true;
-            }
-        }
-        while (true){
-            ry += dy[dir];
-            if(board[ry][rx]=='O'){
-                r_in= true;
-                break;
-            }
-            if(board[ry][rx]=='#'){
-                ry -= dy[dir];
-                break;
-            }
-        }
-        while (true){
-            by += dy[dir];
-            if(board[by][bx]=='O'){
-                b_in= true;
-                break;
-            }
-            if(board[by][bx]=='#'){
-                by -= dy[dir];
-                break;
-            }
-        }
-        if(ry==by){
-            if(r_flag) by -= dy[dir];
-            if(b_flag) ry -= dy[dir];
-        }
-    }
-    if(dir==3){ // 아래로 기울이기
-        if(rx==bx) {
-            if (ry < by) { // RB
-                b_flag = true;
-            }
-            if (by < ry) { // BR
-                r_flag = true;
-            }
-        }
-        while (true){
-            ry += dy[dir];
-            if(board[ry][rx]=='O'){
-                r_in= true;
-                break;
-            }
-            if(board[ry][rx]=='#'){
-                ry -= dy[dir];
-                break;
-            }
-        }
-        while (true){
-            by += dy[dir];
-            if(board[by][bx]=='O'){
-                b_in= true;
-                break;
-            }
-            if(board[by][bx]=='#'){
-                by -= dy[dir];
-                break;
-            }
-        }
-        if(ry==by){
-            if(r_flag) by -= dy[dir];
-            if(b_flag) ry -= dy[dir];
-        }
-    }
-    if(b_in) return;
-    if(r_in && !b_in){
-        res=min(cnt,res);
-        return;
-    }
-    for (int i = 0; i < 4; ++i) {
-        moving(cnt+1,i,ry,rx,by,bx);
+        return tmp;
     }
 
+    if (k <= dp[n + m - 1][n - 1]){
+        return "a" + solve(n - 1, m, k);
+    }
+    else {
+        return "z" + solve(n, m - 1, k - dp[n + m - 1][n - 1]);
+    }
 }
-int main() {
+int main(){
     ios_base::sync_with_stdio(false);
-    cin.tie(nullptr); cout.tie(nullptr);
-    cin>>n>>m;
-    for (int i = 0; i < n; ++i) {
-        string s; cin>>s;
-        for (int j = 0; j < m; ++j) {
-            board[i][j]=s[j];
-            if(board[i][j]=='R') {
-                red = {i, j};
-                board[i][j]='.';
-            }
-            if(board[i][j]=='B') {
-                blue={i,j};
-                board[i][j]='.';
-            }
-            if(board[i][j]=='O') hole={i,j};
+    cin.tie(NULL); cout.tie(NULL);
+    int n,m,k; cin>>n>>m>>k;
+
+    for (int i = 0; i <= n+m; i++) {
+        dp[i][0] = 1;
+        dp[i][i] = 1;
+    }
+
+    for (int i = 2; i <= n+m; i++) {
+        for (int j = 1; j < i; j++) {
+            dp[i][j] = min(dp[i - 1][j - 1] + dp[i - 1][j], INF);
         }
     }
 
-    for (int i = 0; i < 4; ++i) {
-        int ry=red.first; int rx=red.second;
-        int by=blue.first; int bx=blue.second;
-        moving(1,i,ry,rx,by,bx);
+    if (dp[n + m][n] < k){
+        cout << -1 << '\n';
     }
-    if(res>10) cout<<-1<<'\n';
-    else cout<<res<<'\n';
+       
+    else{
+        cout << solve(n, m, k) << '\n';
+    }
+        
 }
