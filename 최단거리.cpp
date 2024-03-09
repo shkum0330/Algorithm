@@ -19,16 +19,18 @@ int dijkstra(int start,int end){
     }
     return dist[end];
 }
+
 //벨만-포드
-void Bellman_Ford(){
+void bellman_Ford(){
     for(int i=1;i<n;i++){
         for(int j=1;j<=m;j++){
             if(dist[e[j].e]>dist[e[j].s]+e[j].w && dist[e[j].s] != INF) dist[e[j].e]=dist[e[j].s]+e[j].w;
         }
     }
 }
+
 //플로이드-워셜
-void Floyd_Warshall(){
+void floyd_Warshall(){
     for (int k = 1; k <= n; ++k) {
         for (int i = 1; i <= n; ++i) {
             for (int j = 1; j <=n; ++j) {
